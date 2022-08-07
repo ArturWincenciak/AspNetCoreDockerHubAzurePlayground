@@ -46,6 +46,7 @@ jobs:
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
       
+  # azure    
   # deploy:
     # runs-on: ubuntu-latest
     # needs: build
