@@ -7,8 +7,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["AspNetCoreDockerHubAzurePlayground/AspNetCoreDockerHubAzurePlayground.csproj", "AspNetCoreDockerHubAzurePlayground/"]
-RUN dotnet restore "AspNetCoreDockerHubAzurePlayground/AspNetCoreDockerHubAzurePlayground.csproj"
+COPY ["./AspNetCoreDockerHubAzurePlayground/AspNetCoreDockerHubAzurePlayground.csproj", "AspNetCoreDockerHubAzurePlayground/"]
+RUN dotnet restore "./AspNetCoreDockerHubAzurePlayground/AspNetCoreDockerHubAzurePlayground.csproj"
 COPY . .
 WORKDIR "/src/AspNetCoreDockerHubAzurePlayground"
 RUN dotnet build "AspNetCoreDockerHubAzurePlayground.csproj" -c Release -o /app/build
