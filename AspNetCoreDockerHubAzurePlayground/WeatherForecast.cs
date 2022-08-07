@@ -18,4 +18,6 @@ public class WeatherForecast
     };
 
     public string Test => "Test";
+
+    public string CiCd => "CI/CD";
 }
