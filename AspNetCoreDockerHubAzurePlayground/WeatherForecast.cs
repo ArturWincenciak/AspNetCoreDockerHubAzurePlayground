@@ -22,4 +22,6 @@ public class WeatherForecast
     public string CiCd => "CI/CD";
 
     public string WebHook => "WebHook";
+
+    public int Blef => 100;
 }
