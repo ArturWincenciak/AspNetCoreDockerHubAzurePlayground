@@ -38,7 +38,7 @@ jobs:
         context: ./AspNetCoreDockerHubAzurePlayground
         tags: |
             teovincent/aspnetcoredockerhubazureplayground:latest 
-            ghcr.io/ArturWincenciak/playground/aspnetcoredockerhubazureplayground:latest
+            ghcr.io/arturwincenciak/playground/aspnetcoredockerhubazureplayground:latest
         # build on feature branches, push only on main branch
         push: ${{ github.ref == 'refs/heads/main' }}
           
