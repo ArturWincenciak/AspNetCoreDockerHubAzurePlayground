@@ -16,4 +16,6 @@ public class WeatherForecast
         Version = "0.0.0.1",
         Contributor = "TeoVincent"
     };
+
+    public string Test => "Test";
 }
