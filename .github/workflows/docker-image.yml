@@ -46,20 +46,20 @@ jobs:
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
       
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+  # deploy:
+    # runs-on: ubuntu-latest
+    # needs: build
+    # environment:
+      # name: 'production'
+      # url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
-    steps:
-    - name: Deploy to Azure Web App
-      id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'aspnetcoredockerhubazureplayground'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_3dd783fb0c1c4ab98da35687f363fe6d }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_68ad054a51b1471ead89fae83216fc6f }}/teovincent/aspnetcoredockerhubazureplayground:${{ github.sha }}'
+    # steps:
+    # - name: Deploy to Azure Web App
+      # id: deploy-to-webapp
+      # uses: azure/webapps-deploy@v2
+      # with:
+        # app-name: 'aspnetcoredockerhubazureplayground'
+        # slot-name: 'production'
+        # publish-profile: ${{ secrets.AzureAppService_PublishProfile_3dd783fb0c1c4ab98da35687f363fe6d }}
+        # images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_68ad054a51b1471ead89fae83216fc6f }}/teovincent/aspnetcoredockerhubazureplayground:${{ github.sha }}'
 
