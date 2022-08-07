@@ -10,18 +10,5 @@ public class WeatherForecast
 
     public string? Summary { get; set; }
 
-    public object Info => new
-    {
-        AppName = nameof(AspNetCoreDockerHubAzurePlayground),
-        Version = "0.0.0.1",
-        Contributor = "TeoVincent"
-    };
-
-    public string Test => "Test";
-
-    public string CiCd => "CI/CD";
-
-    public string WebHook => "WebHook";
-
     public int Blef => 100;
 }
